@@ -6,7 +6,7 @@ import CustomAvatar from "./customAvatar";
 
 export default function Messages() {
   return (
-    <div className="h-full w-full p-5">
+    <div className="h-full overflow-y-scroll overflow-x-hidden w-full p-5">
       {/* user */}
       <div className="flex items-center gap-2 justify-end">
         <p className="bg-blue-500 rounded-tr-none rounded-2xl px-4 py-1">

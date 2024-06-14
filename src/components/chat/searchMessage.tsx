@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Input } from "../ui/input";
 import { Search } from "lucide-react";
 
@@ -9,6 +9,10 @@ export default function SearchMessage() {
   const handleSearch = () => {
     setSearch(true);
   };
+
+  // useEffect(() => {
+  //   setSearch(false);
+  // }, []);
 
   return (
     <>
