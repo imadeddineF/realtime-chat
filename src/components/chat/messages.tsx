@@ -1,27 +1,31 @@
-import Image from "next/image";
 import React from "react";
 import pic from "../../../public/assets/pic.jpg";
-import { MoreHorizontalIcon } from "lucide-react";
-import CustomAvatar from "./customAvatar";
+import UserMessage from "./userMessage";
+import FriendMessage from "./friendMessage";
 
 export default function Messages() {
   return (
     <div className="h-full overflow-y-scroll overflow-x-hidden w-full p-5">
       {/* user */}
-      <div className="flex items-center gap-2 justify-end">
-        <p className="bg-blue-500 rounded-tr-none rounded-2xl px-4 py-1">
-          I just wanna say hello!
-        </p>
-        <CustomAvatar img={pic} />
-      </div>
+      <UserMessage
+        profileImg={pic}
+        userName="John Doe"
+        msgContent={"I just wanna say hello!"}
+        time="14:30 PM"
+        isSent={true}
+        isSeen={true}
+        seen={"14:31 PM"}
+      />
 
       {/* friend */}
-      <div className="flex items-center gap-2">
-        <CustomAvatar img={pic} />
-        <p className="bg-gray-200 rounded-tl-none rounded-2xl px-4 py-1">
-          I just wanna say hello!
-        </p>
-      </div>
+      <FriendMessage
+        profileImg={pic}
+        msgContent={"I just wanna say hello!"}
+        userName={"Imad Eddine"}
+        time={"14:32 PM"}
+        isSent={true}
+        isSeen={false}
+      />
     </div>
   );
 }
